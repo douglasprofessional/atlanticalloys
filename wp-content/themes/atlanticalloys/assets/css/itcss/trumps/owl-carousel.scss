@@ -1,0 +1,26 @@
+.owl-carousel{
+    .owl-stage {
+        @apply
+        flex;
+    }
+    
+    .item{
+        @apply
+        flex-1
+        h-full;
+    }
+
+    .owl-item{
+        img{
+            @apply
+            w-auto;
+        }
+        
+        .card-style{
+            &__logo{
+                @apply
+                mb-6;
+            }
+        }
+    }
+}

@@ -1,0 +1,183 @@
+.illustration-block-text{
+    @apply
+    relative;
+
+    &.parallax{
+        @apply
+        sticky
+        top-0
+        overflow-hidden;
+        
+        .parallax__window{
+            @apply
+            my-initial;
+        }
+
+        .parallax__body{
+            @apply
+            h-full;
+        }
+    }
+
+    &__content{
+        @apply
+        h-full;
+    }
+
+    &__columns{
+        @apply
+        overflow-hidden
+        grid
+        grid-cols-2
+        w-full
+        h-full;
+    }
+
+    &__column{
+        @apply
+        relative
+        flex
+        flex-col
+        items-start;
+
+        &:last-of-type{
+            @apply
+            justify-center
+            gap-6
+            py-[49px]
+            pl-2;
+
+            @media(min-width: 375px){
+                @apply
+                pl-5;
+            }
+
+            @media(min-width: 767px){
+                @apply
+                pl-10;                
+            }
+
+            @media(min-width: 1279px){
+                @apply
+                pl-20;                
+            }
+
+            @media(min-width: 1535px){
+                @apply
+                gap-10
+                py-36
+                pl-[137px];
+            }
+        }
+
+        // Forced rule because of owl-carousel specificity
+        img.illustration-block-text__illustration{
+            @apply
+            w-full
+            h-full
+            object-cover;
+
+            &--mobile{
+                @apply
+                block;
+        
+                @media(min-width: 1023px){
+                    @apply
+                    hidden;
+                }
+            }
+            &--desktop{
+                @apply
+                hidden;
+        
+                @media(min-width: 1023px){
+                    @apply
+                    block;
+                }
+            }
+        }
+    }
+
+    &__title{
+        &.misaligned-title{
+            @apply
+            leading-7;
+
+            @media(min-width: 1279px){
+                @apply
+                leading-9;
+            }
+
+            @media(min-width: 1535px){
+                @apply
+                leading-50px;
+            }
+        }
+    }
+
+    &__description{
+        @apply
+        w-full
+        max-w-36
+        text-sm
+        m-0;
+
+        @media(min-width: 767px){
+            @apply
+            max-w-72;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            text-lg;
+        }
+    }
+
+    &__link{
+        @apply
+        w-fit
+        text-sm
+        p-3;
+
+        svg{
+            @apply
+            hidden;
+
+            @media(min-width: 480px){
+                @apply
+                block;
+            }
+        }
+
+        @media(min-width: 480px){
+            @apply
+            text-base
+            pt-0
+            pr-0
+            pb-0
+            pl-4;
+        }
+    }
+
+    &__atlantic-outline{
+        @apply
+        hidden;
+
+        @media(min-width: 1023px){
+            @apply
+            pointer-events-none
+            inline-flex
+            absolute
+            top-1/2
+            -translate-y-1/2
+            w-1/2
+            opacity-10
+            z-0;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            w-3/4;
+        }
+    }
+}

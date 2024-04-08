@@ -1,0 +1,26 @@
+.wp-block-image{
+    @apply
+    w-full
+    mx-auto
+    px-5;
+
+    @media(min-width: 1279px){
+        @apply
+        max-w-[81%];
+    }
+
+    @media(min-width: 1750px){
+        @apply
+        max-w-[1415px];
+    }
+
+    figure{
+        @apply
+        w-full;
+
+        img{
+            @apply
+            w-full;
+        }
+    }
+}

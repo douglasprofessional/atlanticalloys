@@ -1,0 +1,343 @@
+.content-product{
+    &__article{
+        @apply
+        w-full
+        h-auto
+        bg-white;
+    }
+
+    &__wrap{
+        @apply
+        w-full
+        flex
+        flex-col
+        justify-center
+        items-center
+        gap-[30px];
+
+        @media(min-width: 1535px){
+            @apply
+            gap-14;
+        }
+    }
+
+    &__header{
+        @apply
+        w-full;
+    }
+
+    &__breadcrumbs{
+        @apply
+        whitespace-nowrap
+        overflow-y-hidden
+        overflow-x-auto
+        w-full
+        h-7
+        flex
+        justify-start
+        items-center
+        gap-2
+        mb-3;
+
+        @media(min-width: 600px){
+            @apply
+            justify-center;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            mb-8;
+        }
+
+        &::-webkit-scrollbar {
+            @apply
+            w-full
+            h-1;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            @apply
+            overflow-hidden
+            rounded-full
+            bg-gray-100;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            @apply
+            rounded-full
+            bg-gray-200;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            @apply
+            bg-gray-300;
+        }
+
+        a{
+            @extend .transition;
+            &:hover{
+                @apply
+                underline;
+            }
+        }
+    }
+
+    &__breadcrumbs-separator{
+        @apply
+        w-auto
+        h-[6px]
+        -rotate-90;
+    }
+
+    &__title{
+        @apply
+        w-full
+        text-center;
+    }
+
+    &__content{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        gap-[30px];
+
+        @media(min-width: 1535px){
+            @apply
+            gap-14;
+        }
+    }
+
+    &__block{
+        @apply
+        w-full
+        max-w-[1306px]
+        flex
+        flex-col
+        gap-[30px]
+        bg-gray-100
+        pt-8
+        pb-4
+        px-4
+        mx-auto
+        overflow-y-hidden
+        overflow-x-auto;
+
+        &::-webkit-scrollbar {
+            @apply
+            w-full
+            h-2;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            @apply
+            overflow-hidden
+            rounded-full
+            bg-gray-100;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            @apply
+            rounded-full
+            bg-gray-200;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            @apply
+            bg-gray-300;
+        }
+
+        @media(min-width: 1023px){
+            @apply
+            pt-16
+            pb-8;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            gap-[60px]
+            px-28;
+        }
+    }
+
+    &__block-title{
+        @apply
+        w-full
+        text-lg
+        text-left
+        text-white
+        font-normal
+        bg-blue-300
+        p-1
+        m-0;
+        line-height: 24px !important;
+
+        @media(min-width: 1023px){
+            @apply
+            w-fit
+            text-2xl;
+            line-height: 24px !important;
+        }
+    }
+
+    &__block-table{
+        @apply
+        w-full
+        border-collapse;
+    }
+
+    &__block-tr{
+        &--header{
+            @apply
+            h-[30px];
+
+            @media(min-width: 1535px){
+                @apply
+                h-[70px];
+            }
+        }
+
+        &--body{
+            @apply
+            h-[60px];
+
+            & + tr{
+                @apply
+                border-t-1
+                border-t-gray-200;
+            }
+
+            @media(min-width: 1535px){
+                @apply
+                h-[75px];
+            }
+        }
+    }
+
+    &__block-th,
+    &__block-td{
+        @apply
+        min-w-32
+        text-left;
+
+        &:last-child{
+            @apply
+            text-right;                
+        }
+
+        &--text-center{
+            &:first-of-type{
+                @apply
+                text-left;
+            }
+            &:last-child{
+                @apply
+                text-right;                
+            }
+
+            &:first-of-type,
+            &:last-of-type{
+                @media(min-width: 767px){
+                    @apply
+                    text-center;
+                }
+            }
+        }
+    }
+
+    &__block-th{
+        @apply
+        text-sm
+        text-blue-300
+        font-bold;
+
+        @media(min-width: 1279px){
+            @apply
+            text-lg;
+        }
+    }
+
+    &__block-td{
+        @apply
+        text-sm
+        text-gray-300;
+
+        &:first-of-type{
+            @apply
+            font-bold;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            text-lg;
+        }
+    }
+
+    &__footer{
+        @apply
+        w-full
+        mt-8;
+
+        @media(min-width: 1535px){
+            @apply
+            mt-60px;
+        }
+
+        .home-products{
+            &__term-posts{
+                @apply
+                bg-blue-300;
+            }
+    
+            &__term-title{
+                @apply
+                text-white
+                border-b-white/[.3];
+        
+                @media(min-width: 1279px){
+                    @apply
+                    text-[32px];
+                } 
+            }
+            
+            &__post-link{
+                @apply
+                text-white;
+    
+                &:hover{
+                    @apply
+                    bg-blue-950;
+                }   
+            }
+        }
+    }
+
+    &__footer-content{
+        @apply
+        w-full
+        max-w-[1306px]
+        mx-auto;
+    }
+
+    &__footer-title{
+        @apply
+        text-base
+        text-gray-300
+        font-normal
+        border-b-1
+        border-b-gray-300
+        pb-1
+        mb-20;
+
+        @media(min-width: 1279px){
+            @apply
+            text-lg;
+        }
+    }
+}

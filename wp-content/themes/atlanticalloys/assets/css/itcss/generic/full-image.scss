@@ -1,0 +1,14 @@
+figure.full-image{
+    @apply
+    w-full;
+
+    img{
+        @apply
+        w-full;        
+    }
+}
+
+img.full-image{
+    @apply
+    w-full;
+}

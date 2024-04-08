@@ -1,0 +1,12 @@
+p {
+  @apply
+  text-base
+  text-gray-400
+  font-normal
+  leading-10;
+
+  @media (min-width: 1535px) {
+    @apply
+    text-lg;
+  }
+}

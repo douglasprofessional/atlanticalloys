@@ -1,0 +1,156 @@
+.hero,
+.carousel-vertical,
+.atlantic-in-numbers,
+.grid-cards,
+.texts-and-carousel,
+.illustration-block-text,
+.home-products,
+.page-with-product-list{
+    &.is-theme-light{
+        @apply
+        bg-white
+        text-gray-400;
+        
+        div[data-type="core/button"]{
+            .wp-block-button__link{
+                @apply
+                bg-blue-500
+                text-white
+                border-blue-500;
+            }
+        }
+
+        .header-pretitle,
+        .header-title,
+        .header-subtitle,
+        .header-description,
+        .misaligned-title,
+        .texts-and-carousel__info-description,
+        .texts-and-carousel__period-description,
+        .page-with-product-list__list-title{
+            @apply
+            text-gray-400;
+        }
+
+        .page-with-product-list__list-title{
+            @apply
+            border-b-1
+            border-b-gray-300;
+        }
+
+        .page-with-product-list__wysiwyg{
+            h1, h2, h3, h4, h5, h6, p, li{
+                @apply
+                text-gray-400;
+            }
+        }
+
+        .wp-block-button__link,
+        .button{
+            @apply
+            bg-transparent
+            border-blue-500
+            text-blue-500;
+
+            svg{
+                @apply
+                bg-transparent
+                text-blue-500
+                border-blue-500;
+            }
+
+            &:hover{
+                @apply
+                bg-blue-500
+                text-white;
+
+                svg{
+                    @apply
+                    bg-blue-500
+                    text-white
+                    border-white;
+                }
+            }
+        }
+
+        .carousel-vertical__slides{
+            .item{
+                background-color: #F5F8FA !important;         
+            }
+            .owl-dots{
+                .owl-dot{
+                    border: 1px solid #252525 !important;
+                    background: transparent !important;
+    
+                    &:hover,
+                    &.active{
+                        background: #252525 !important;
+                    }
+                }
+            }
+            .carousel-vertical__columns{
+                &--orientation-left,
+                &--orientation-right{
+                    @apply
+                    bg-gray-100;
+
+                    .misaligned-title{
+                        @apply
+                        text-blue-500;
+                    }
+                }
+            }
+        }
+
+        .atlantic-in-numbers__title{
+            @apply
+            text-gray-400;        
+        }
+        .atlantic-in-numbers__card-title{
+            @apply
+            text-blue-400;            
+        }
+        .atlantic-in-numbers__card-description{
+            @apply
+            text-gray-300;
+        }
+
+        .atlantic-in-numbers__card-dot{
+            @apply
+            bg-blue-400;
+        }
+
+        .texts-and-carousel__period-title{
+            @apply
+            text-blue-200
+        }
+
+        .texts-and-carousel__period-description{
+            @media(min-width: 767px){
+                @apply
+                text-gray-300;
+            }
+        }
+
+        .home-products__term-posts{
+            @apply
+            bg-gray-100;
+        }
+
+        .home-products__term-title{
+            @apply
+            text-blue-500
+            border-b-blue-500/[.3];
+        }
+
+        .home-products__post-link{
+            @apply
+            text-blue-500;
+
+            &:hover{
+                @apply
+                bg-gray-200;
+            }
+        }
+    }
+}

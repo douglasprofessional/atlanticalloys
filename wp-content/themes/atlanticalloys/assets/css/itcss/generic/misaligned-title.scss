@@ -1,0 +1,47 @@
+.misaligned-title{
+    @apply
+    flex
+    flex-col
+    gap-0
+    text-2xl
+    font-normal
+    leading-[22px]
+    py-1;
+
+    span{
+        @apply
+        indent-7;
+    }
+
+    @media(min-width: 1023px){
+        @apply
+        text-4xl;
+
+        span{
+            @apply
+            indent-10;
+        }
+    }
+
+    @media(min-width: 1279px){
+        @media(min-width: 1023px){
+            @apply
+            text-6xl;
+
+            span{
+                @apply
+                indent-16;
+            }
+        }        
+    }
+
+    @media(min-width: 1535px){
+        @apply
+        text-[95px];  
+
+        span{
+            @apply
+            indent-24;
+        }      
+    }
+}

@@ -1,0 +1,73 @@
+.header-pretitle,
+.header-title,
+.header-subtitle,
+.header-description{
+    @apply
+    w-full
+    mx-auto;
+
+    @media(min-width: 1023px){
+        @apply
+        max-w-screen-80;
+    }
+}
+
+.header-pretitle,
+.header-subtitle,
+.header-description{
+    @apply
+    font-normal;    
+}
+
+.header-pretitle,
+.header-description{
+    @apply
+    text-base;
+
+    @media(min-width: 1535px){
+        @apply
+        text-2xl;
+    }
+}
+
+.header-title{
+    @apply
+    text-2xl
+    font-extrabold
+    leading-8;
+
+    @media(min-width: 1023px){
+        @apply
+        text-55px
+        leading-60px;
+    }
+
+    @media(min-width: 1535px){
+        @apply
+        text-7xl
+        leading-70px;
+    }
+}
+
+.header-subtitle{
+    @apply
+    text-xl;
+
+    @media(min-width: 1535px){
+        @apply
+        text-3xl;
+    }
+}
+
+// Line Height
+.header-pretitle,
+.header-subtitle,
+.header-description{
+    @apply
+    leading-8;
+
+    @media(min-width: 375px){
+        @apply
+        leading-10;
+    }
+}

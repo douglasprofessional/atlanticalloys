@@ -1,0 +1,177 @@
+.home-products{
+    @apply
+    relative;
+
+    &.parallax{
+        @apply
+        sticky
+        top-0
+        overflow-hidden;
+    }
+
+	&__content{
+		@apply
+		w-full
+		flex
+		flex-col
+		gap-10;
+	}
+
+    &__pretitle,
+    &__title,
+    &__subtitle,
+    &__description,
+    &__link{
+        @apply
+        text-center
+        mx-auto;
+    }
+
+    &__terms{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        gap-3
+        mt-11;
+
+        @media(min-width: 767px){
+            @apply
+            grid-cols-2
+            gap-5;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            mt-20;
+        }
+    }
+
+    &__term{
+        @apply
+        w-full
+        flex
+        flex-col;
+
+        .home-products__term-thumbnail{
+            @apply
+            hidden
+            w-full
+            h-[255px]
+            object-cover;
+
+            @media(min-width: 767px){
+                @apply
+                block;
+            }
+            
+            @media(min-width: 1023px){
+                @apply
+                h-[318px];            
+            }
+        }
+
+        &:first-of-type{
+            .home-products__term-thumbnail{
+                @apply
+                block;
+
+                @media(min-width: 1023px){
+                    @apply
+                    h-[318px];            
+                }
+            }
+        }
+    }
+
+    &__term-posts{
+        @apply
+        flex-1
+        w-full
+        flex
+        flex-col
+        bg-gray-100
+        py-11
+        px-6;
+
+        @media(min-width: 1535px){
+            @apply
+            px-60px;
+        }        
+    }
+
+    &__term-title{
+        @apply
+        w-full
+        text-lg
+        font-normal
+        text-blue-500
+        border-b-1
+        border-b-blue-500/[.3]
+        pb-6
+        mb-6;
+
+        @media(min-width: 1279px){
+            @apply
+            text-[32px]
+            pb-[37px]
+            mb-[37px];
+        } 
+    }
+
+    &__post-list{
+        @apply
+        w-full
+        flex
+        flex-col;
+    }
+
+    &__post-link{
+        @extend .transition;
+        @apply
+        flex
+        justify-between
+        items-center
+        gap-2
+        w-full
+        text-sm
+        font-normal
+        text-blue-500
+        py-3;
+
+        &:hover{
+            @apply
+            bg-gray-200
+            px-3;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            text-lg;
+        }
+    }
+}
+
+.page-with-product-list{
+    .home-products{
+        &__term-posts{
+            @apply
+            bg-blue-300;
+        }
+        &__term-title{
+            @apply
+            text-white
+            border-b-white/[.3];
+        }
+
+        &__post-link{
+            @apply
+            text-white;
+
+            &:hover{
+                @apply
+                bg-blue-950;
+            }   
+        }
+    } 
+}

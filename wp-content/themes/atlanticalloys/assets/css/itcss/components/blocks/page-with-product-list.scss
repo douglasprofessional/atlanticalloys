@@ -1,0 +1,141 @@
+.page-with-product-list{
+    &__content{
+        @apply
+        w-full
+        max-w-[1306px]
+        flex
+        flex-col
+        gap-11
+        mx-auto;
+
+        @media(min-width: 1535px){
+            @apply
+            gap-24;
+        }
+    }
+
+    &__group{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-11;      
+    }
+
+    &__title{
+        @apply
+        text-center;
+    }
+
+    &__wysiwyg{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-5;
+
+        h1, h2, h3, h4, h5, h6, p, li{
+            @apply
+            w-full
+            text-gray-400;
+        }
+
+        h1, h2, h3, h4, h5, h6{
+            @apply
+            text-xl
+            font-semibold
+            p-0
+            mx-0
+            mt-0
+            mb-2;
+        }
+
+        h1{
+            @apply
+            text-3xl;
+
+            @media(min-width: 1535px){
+                @apply
+                text-5xl;
+            }
+        }
+
+        h2{
+            @apply
+            text-2xl;
+
+            @media(min-width: 1535px){
+                @apply
+                text-3xl;
+            }
+        }
+
+        h3{
+            @apply
+            text-xl;
+
+            @media(min-width: 1535px){
+                @apply
+                text-2xl;
+            }
+        }
+
+        h4, h5, h6{
+            @apply
+            text-lg;
+
+            @media(min-width: 1535px){
+                @apply
+                text-xl;
+            }
+        }
+
+        p, li{
+            @apply
+            text-sm
+            font-normal
+            p-0
+            m-0;
+
+            @media(min-width: 1023px){
+                @apply
+                text-lg;
+            }
+        }
+    }
+
+    &__banner{
+        @apply
+        block
+        w-full
+        h-[215px]
+        object-cover
+        mt-11;
+
+        @media(min-width: 1023px){
+            @apply
+            h-[454.4px];
+        }
+    }
+
+    &__list-content{
+        @apply
+        w-full;
+    }
+
+    &__list-title{
+        @apply
+        text-base
+        text-gray-300
+        font-normal
+        border-b-1
+        border-b-gray-300
+        pb-1
+        mb-20;
+
+        @media(min-width: 1279px){
+            @apply
+            text-lg;
+        }
+    }
+}

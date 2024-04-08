@@ -1,0 +1,178 @@
+.site-footer{
+    @apply
+    relative
+    w-full;
+
+    &__content{
+        @apply
+        w-full
+        bg-blue-400
+        py-52px;
+
+        @media(min-width: 1535px){
+            @apply
+            pt-150px;
+        }
+    }
+
+    &__columns{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-7;
+
+        @media(min-width: 1023px){
+            @apply
+            flex-row
+            gap-10;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            gap-36;
+        }
+    }
+
+    &__column{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-5;
+
+        @media(min-width: 1023px){
+            @apply
+            flex-row
+            gap-10;
+        }
+    }
+
+    &__vertical{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-10;
+
+        &--form{
+            @apply
+            gap-0;
+        }
+    }
+
+    &__inner-columns{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-10;
+
+        @media(min-width: 767px){
+            @apply
+            flex-row;
+        }
+    }
+
+    &__inner-column{
+        @apply
+        basis-1/2;
+    }
+
+    &__title{
+        @apply
+        w-full
+        text-2xl
+        text-white
+        font-normal
+        leading-normal-important
+        mb-8;
+    }
+
+    &__contact-us{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-7;
+
+        li{
+            @apply
+            w-full
+            flex
+            flex-col
+            gap-4;            
+        }
+    }
+
+    &__contact-name{
+        @apply
+        w-full
+        text-lg
+        text-white
+        font-bold
+        leading-normal-important;
+    }
+
+    &__contact-tel,
+    &__contact-mail,
+    &__google-map,
+    &__quick-links li a{
+        @extend .transition;
+        @apply
+        w-fit
+        text-base
+        text-white
+        font-normal;
+
+        @media(min-width: 1279px){
+            @apply
+            text-lg;
+        }
+        
+        &:hover{
+            @apply
+            underline;
+        }
+    }
+
+    &__contact-tel,
+    &__contact-mail{
+        @apply
+        underline;
+    }
+
+    &__google-map{
+        @apply
+        inline-flex;
+    }
+
+    &__quick-links{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-4;
+
+        li{
+            @apply
+            leading-normal-important;
+        }
+    }
+
+    &__copy{
+        @apply
+        w-full
+        bg-black-200
+        py-10;
+
+        p{
+            @apply
+            w-full
+            mx-auto
+            text-center
+            text-base
+            text-white;
+        }
+    }
+}

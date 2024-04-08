@@ -1,0 +1,31 @@
+hr,
+.hr,
+.wp-block-separator {
+  @apply
+  border-t-0
+  border-r-0
+  border-b-2
+  border-b-slate-400
+  border-l-0
+  my-8;
+
+  &--white{
+    @apply
+    border-b-white;
+  }
+
+  &--black{
+    @apply
+    border-b-black-100;
+  }
+
+  &--blue{
+    @apply
+    border-b-blue-200;
+  }
+
+  &--gray{
+    @apply
+    border-b-gray-300;
+  }
+}

@@ -1,0 +1,353 @@
+.texts-and-carousel{
+    @apply
+    relative;
+
+    &.parallax{
+        @apply
+        sticky
+        top-0
+        overflow-hidden;
+    }
+    
+	&__content{
+		@apply
+		w-full
+		flex
+		flex-col;
+	}
+
+    &__columns{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        gap-10
+        mt-10
+        mx-auto;
+
+        @media(min-width: 767px){
+            @apply
+            mt-14
+            grid-cols-2;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            mt-20
+            max-w-screen-80
+            grid-cols-5;
+        }
+    }
+
+    &__column{
+        @apply
+        w-full;
+
+        &:nth-of-type(1),
+        &:nth-of-type(3){
+            @media(min-width: 1279px){
+                @apply
+                col-span-2;
+            }
+        }
+
+        &:nth-of-type(2){
+            @apply
+            hidden;
+
+            @media(min-width: 1279px){
+                @apply
+                block
+                col-span-1;
+            }
+        }
+    }
+
+    &__pretitle,
+    &__title,
+    &__subtitle,
+    &__description,
+    &__link{
+        @apply
+        text-center
+        mx-auto;
+    }
+
+    &__info{
+        @apply
+        overflow-hidden
+        w-full
+        flex
+        gap-4;
+
+        @media(min-width: 767px){
+            @apply
+            flex-col
+            gap-4;
+        }        
+    }
+
+    &__info-title{
+        @apply
+        w-[125px]
+        leading-[22px];
+
+        @media(min-width: 1279px){
+            @apply
+            leading-[40px];
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            w-full
+            leading-[70px];
+        }
+
+        span{
+            @media(min-width: 1535px){
+                @apply
+                indent-[74px];
+            }
+        }
+    }
+
+    &__info-description{
+        @apply
+        w-full
+        max-w-[270px]
+        flex-1
+        text-sm
+        text-gray-400
+        font-normal;
+        list-style: normal !important;
+
+        @media(min-width: 1535px){
+            @apply
+            text-lg;
+            list-style: normal !important;
+        }
+
+        
+    }
+
+    &__history{
+        @apply
+        overflow-hidden
+        w-full
+        flex
+        gap-4;
+
+        @media(min-width: 767px){
+            @apply
+            flex-col
+            items-end
+            gap-4;
+        }
+    }
+
+    &__history-title.misaligned-title{
+        @apply
+        w-[125px]
+        leading-[28px];
+
+        @media(min-width: 1023px){
+            @apply
+            flex
+            flex-col
+            justify-end
+            mr-3;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            mr-[50px]
+            leading-[40px];
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            mr-[155px]
+            leading-[70px];
+        }
+
+        span{
+            @media(min-width: 1023px){
+                @apply
+                indent-0;
+            }
+            @media(min-width: 1279px){
+                @apply
+                -indent-[60px];
+            }
+
+            @media(min-width: 1535px){
+                @apply
+                -indent-[100px];
+            }
+        }
+    }
+
+    &__period-title{
+        @apply
+        text-2xl
+        text-blue-200
+        font-normal
+        leading-normal-important;
+
+        @media(min-width: 1535px){
+            @apply
+            text-7xl
+            text-blue-300;
+        }
+    }
+
+    &__period-description{
+        @apply
+        w-full
+        max-w-60
+        text-sm
+        text-gray-400
+        font-normal
+        leading-normal-important;
+
+        @media(min-width: 767px){
+            @apply
+            text-base
+            text-right
+            text-gray-300;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            text-2xl;
+        }        
+    }
+
+    &__owl-carousel.owl-carousel{
+        @apply
+        w-[120px];
+
+        @media(min-width: 340px){
+            @apply
+            w-[140px];
+        }
+
+        @media(min-width: 360px){
+            @apply
+            w-[160px];
+        }
+
+        @media(min-width: 375px){
+            @apply
+            w-[175px];
+        }
+
+        @media(min-width: 390px){
+            @apply
+            w-[190px];
+        }
+
+        @media(min-width: 414px){
+            @apply
+            w-[214px];
+        }
+
+        @media(min-width: 460px){
+            @apply
+            w-[260px];
+        }
+
+        @media(min-width: 500px){
+            @apply
+            w-[300px];
+        }
+
+        @media(min-width: 600px){
+            @apply
+            w-[400px];
+        }
+
+        @media(min-width: 767px){
+            @apply
+            w-full;
+        }
+
+        .item{
+            @apply
+            flex
+            flex-col
+            w-full;
+
+            @media(min-width: 767px){
+                @apply
+                items-end
+                gap-4;
+            }
+        }
+
+        .owl-nav{
+            @apply
+            w-full
+            flex
+            justify-start
+            items-center
+            gap-1
+            mt-3;
+
+            @media(min-width: 767px){
+                @apply
+                justify-end;
+            }
+
+            @media(min-width: 1023px){
+                @apply
+                mt-5;
+            }
+
+            button{
+                @extend .transition;
+                @apply
+                w-11
+                h-11;
+
+                @media(min-width: 1535px){
+                    @apply
+                    w-16
+                    h-16;
+                }
+
+                &.owl-prev,
+                &.owl-next{
+                    border: 1px solid #2B3990 !important;
+                    @apply
+                    bg-white
+                    text-blue-300;
+
+                    &:hover{
+                        border: 1px solid #012036 !important;
+                        @apply
+                        bg-blue-400
+                        text-white;
+                    }
+
+                    &.disabled{
+                        @apply
+                        pointer-events-none
+                        opacity-50;
+                    }
+                }
+
+                svg.arrow-prev{
+                    @apply
+                    rotate-180
+                    scale-03;
+                }
+
+                svg.arrow-next{
+                    @apply
+                    scale-03;
+                }
+            }
+        }
+    }
+}

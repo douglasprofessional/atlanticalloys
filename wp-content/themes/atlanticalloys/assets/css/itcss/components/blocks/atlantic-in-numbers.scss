@@ -1,0 +1,141 @@
+.atlantic-in-numbers{
+    @apply
+    relative;
+
+    &.parallax{
+        @apply
+        sticky
+        top-0
+        overflow-hidden;
+    }
+    
+    &__content{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-10;
+
+        @media(min-width: 1279px){
+            @apply
+            gap-20;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            gap-24;
+        }
+    }
+
+    &__title{
+        @apply
+        w-full
+        text-base
+        text-center
+        text-white
+        leading-normal-important
+        font-bold;
+
+        @media(min-width: 1023px){
+            @apply
+            text-55px
+            font-normal;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            text-72px;
+        }
+    }
+
+    &__cards{
+        @apply
+        w-full
+        grid
+        grid-cols-1;
+
+        @media(min-width: 375px){
+            @apply
+            grid-cols-2;
+        }
+
+        @media(min-width: 767px){
+            @apply
+            flex
+            justify-center
+            items-start
+            flex-wrap
+            max-w-[90%]
+            mx-auto;
+        }
+    }
+
+    &__card{
+        @apply
+        w-full
+        flex
+        flex-col
+        items-center
+        gap-2
+        p-4;
+
+        @media(min-width: 767px){
+            @apply
+            basis-1/3;
+        }
+
+        @media(min-width: 1023px){
+            @apply
+            p-7;
+        }
+
+        @media(min-width: 1279px){
+            @apply
+            basis-1/4;
+        }
+    }
+
+    &__card-title{
+        @apply
+        w-full
+        text-2xl
+        text-center
+        text-white
+        font-normal;
+
+        @media(min-width: 1023px){
+            @apply
+            text-55px
+            mb-3;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            text-72px;
+        }
+    }
+
+    &__card-dot{
+        @apply
+        contents
+        w-1
+        h-1
+        bg-white
+        mx-auto;
+    }
+
+    &__card-description{
+        @apply
+        w-full
+        text-base
+        text-center
+        text-white;
+
+        @media(min-width: 1023px){
+            @apply
+            text-lg
+            max-w-[80%]
+            mx-auto;
+        }
+    }
+}

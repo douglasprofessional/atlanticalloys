@@ -1,0 +1,8 @@
+default:
+  autoload:
+    "": tests/features/bootstrap
+
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://dev.url
+      goutte: ~

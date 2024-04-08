@@ -1,0 +1,39 @@
+.parallax{
+    @apply
+    sticky
+    top-0
+    overflow-hidden;
+
+    &__window{
+        @apply
+        w-full
+        h-[80vh]
+        my-[50px]
+        mx-auto
+        overflow-x-hidden
+        overflow-y-auto;
+
+        &::-webkit-scrollbar {
+            @apply
+            w-0;
+        }
+    }
+
+    &__body{
+        @apply
+        h-auto
+        cursor-s-resize;
+    }
+
+    &__image{
+        @apply
+        absolute
+        top-0
+        left-0
+        w-full
+        min-h-full
+        object-cover
+        brightness-50
+        z-0;
+    }
+}

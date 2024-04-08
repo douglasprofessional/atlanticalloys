@@ -1,0 +1,37 @@
+.content-blog{
+
+    &__article{
+        @apply
+        w-full;
+    }
+
+    &__header{
+        @apply
+        w-full;
+    }
+
+    &__title{
+        @apply
+        w-full;
+    }
+
+    &__infos{
+        @apply
+        w-full;
+    }
+
+    &__date{
+        @apply
+        w-fit;
+    }
+
+    &__content{
+        @apply
+        w-full;
+    }
+
+    &__footer{
+        @apply
+        w-full;
+    }
+}

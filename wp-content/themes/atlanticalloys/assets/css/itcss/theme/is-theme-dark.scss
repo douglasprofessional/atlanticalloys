@@ -1,0 +1,150 @@
+.hero,
+.carousel-vertical,
+.atlantic-in-numbers,
+.grid-cards,
+.texts-and-carousel,
+.illustration-block-text,
+.home-products,
+.page-with-product-list{
+    &.is-theme-dark{
+        @apply
+        bg-blue-500
+        text-white;
+
+        div[data-type="core/button"]{
+            .wp-block-button__link{
+                @apply
+                bg-transparent
+                text-white
+                border-white;
+            }
+        }
+
+        .header-pretitle,
+        .header-title,
+        .header-subtitle,
+        .header-description,
+        .misaligned-title{
+            @apply
+            text-white;
+        }
+
+        .wp-block-button__link,
+        .button{
+            @apply
+            bg-transparent
+            border-white
+            text-white;
+
+            svg{
+                @apply
+                bg-transparent
+                text-white
+                border-white;
+            }
+
+            &:hover{
+                @apply
+                bg-white
+                text-blue-500;
+
+                svg{
+                    @apply
+                    bg-white
+                    text-blue-500
+                    border-blue-500;
+                }
+            }
+        }
+
+        .carousel-vertical__slides{
+            .owl-dots{
+                .owl-dot{
+                    border: 1px solid white !important;
+                    background: transparent !important;
+    
+                    &:hover,
+                    &.active{
+                        background: white !important;
+                    }
+                }
+            }
+        }
+
+        .atlantic-in-numbers__title,
+        .atlantic-in-numbers__card-title,
+        .atlantic-in-numbers__card-description,
+        .texts-and-carousel__info-description,
+        .texts-and-carousel__period-description,
+        .page-with-product-list__list-title{
+            @apply
+            text-white;
+        }
+
+        .page-with-product-list__list-title{
+            @apply
+            border-b-1
+            border-b-white;
+        }
+
+        .page-with-product-list__wysiwyg{
+            h1, h2, h3, h4, h5, h6, p, li{
+                @apply
+                text-white;
+            }
+        }
+
+        .atlantic-in-numbers__card-dot{
+            @apply
+            bg-white;
+        }
+
+        .grid-cards__card{
+            @apply
+            bg-blue-300;
+            
+            .grid-cards__card-pretitle,
+            .grid-cards__card-description,
+            .grid-cards__card-title{
+                @apply
+                text-white;
+            }
+        }
+
+        .grid-cards__card-link{
+            @extend .transition;
+            &:hover{
+                .grid-cards__card{
+                    @apply
+                    bg-blue-400;
+                }
+            }
+        }
+
+        .home-products__term-posts{
+            @apply
+            bg-blue-300;
+        }
+
+        .home-products__term-title{
+            @apply
+            text-white
+            border-b-white/[.3];
+    
+            @media(min-width: 1279px){
+                @apply
+                text-[32px];
+            } 
+        }
+
+        .home-products__post-link{
+            @apply
+            text-white;
+
+            &:hover{
+                @apply
+                bg-blue-950;
+            }   
+        }
+    }
+}

@@ -1,0 +1,65 @@
+/*
+ ITCSS ARCHITECTURE
+ Doc: https://willianjusten.com.br/organizando-seu-css-com-itcss
+*/
+
+// Settings
+@import "./itcss/settings/tailwindcss";
+
+// Tools
+@import "./itcss/tools/lorem";
+
+// Generic
+@import "./itcss/generic/border-radius";
+@import "./itcss/generic/core-button";
+@import "./itcss/generic/full-image";
+@import "./itcss/generic/header-titles";
+@import "./itcss/generic/misaligned-title";
+@import "./itcss/generic/transition";
+
+// Base (html tags)
+@import "./itcss/base/html";
+@import "./itcss/base/body";
+@import "./itcss/base/section";
+
+@import "./itcss/base/button";
+@import "./itcss/base/headings";
+@import "./itcss/base/hr";
+@import "./itcss/base/main";
+@import "./itcss/base/paragraph";
+
+// Object
+@import "./itcss/objects/button";
+@import "./itcss/objects/container";
+@import "./itcss/objects/parallax";
+
+// Components
+@import "./itcss/components/content-blog";
+@import "./itcss/components/content-none";
+@import "./itcss/components/content-product";
+@import "./itcss/components/content-search";
+@import "./itcss/components/form-custom";
+@import "./itcss/components/mainmenu";
+@import "./itcss/components/page";
+@import "./itcss/components/page-404";
+@import "./itcss/components/site-header";
+@import "./itcss/components/site-footer";
+@import "./itcss/components/search-overlay";
+
+@import "./itcss/components/blocks/atlantic-in-numbers";
+@import "./itcss/components/blocks/carousel-vertical";
+@import "./itcss/components/blocks/grid-cards";
+@import "./itcss/components/blocks/hero";
+@import "./itcss/components/blocks/home-products";
+@import "./itcss/components/blocks/illustration-block-text";
+@import "./itcss/components/blocks/page-with-product-list";
+@import "./itcss/components/blocks/texts-and-carousel";
+
+// Theme
+@import "./itcss/theme/is-theme-dark";
+@import "./itcss/theme/is-theme-light";
+
+// Trumps
+@import "./itcss/trumps/gutenberg";
+@import "./itcss/trumps/hidden";
+@import "./itcss/trumps/owl-carousel";

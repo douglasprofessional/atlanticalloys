@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<ruleset name="WP-Theme">
+  	<description>Nucleus WordPress Coding Standards.</description>
+
+	<!-- Only scan PHP files. -->
+	<arg name="extensions" value="php"/>
+
+	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
+	<arg name="cache"/>
+
+	<!-- Exclude the Composer Vendor directory. -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<!-- Exclude the Node Modules directory. -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+
+	<!-- Exclude the Tests directory. -->
+	<exclude-pattern>*/tests/*</exclude-pattern>
+
+	<!-- Yoda conditions, we must ignore -->
+	<rule ref="WordPress.PHP.YodaConditions.NotYoda">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress.DateTime.RestrictedFunctions.date_date">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n.NonSingularStringLiteralText">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Include the WordPress-Extra standard. -->
+	<rule ref="WordPress-Core"/>
+	<rule ref="WordPress.CodeAnalysis.EmptyStatement"/>
+
+	<!-- These rules are being set as warnings instead of errors, so we can error check the entire codebase. -->
+	<rule ref="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase">
+		<type>warning</type>
+	</rule>
+	<rule ref="WordPress.DB.PreparedSQL.InterpolatedNotPrepared">
+		<type>warning</type>
+	</rule>
+	<rule ref="WordPress.DB.PreparedSQL.NotPrepared">
+		<type>warning</type>
+	</rule>
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<type>warning</type>
+	</rule>
+
+	<!-- Add in some extra rules from other standards. -->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
+	
+	<!-- WPCS1621: These files are expected to use _ instead of -. -->
+	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<exclude-pattern>*/lib/*</exclude-pattern>
+	</rule>
+
+	<rule ref="PEAR.Files.IncludingFile.BracketsNotRequired">
+		<type>warning</type>
+	</rule>
+	<rule ref="PEAR.Files.IncludingFile.UseRequire">
+		<type>warning</type>
+	</rule>
+	<rule ref="PEAR.Files.IncludingFile.UseRequireOnce">
+		<type>warning</type>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+
+	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
+	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
+</ruleset>

@@ -1,0 +1,11 @@
+.get-started{
+    @apply
+    relative;
+
+    &.parallax{
+        @apply
+        sticky
+        top-0
+        overflow-hidden;
+    }
+}

@@ -1,0 +1,182 @@
+.grid-cards{
+    @apply
+    relative;
+
+    &.parallax{
+        @apply
+        sticky
+        top-0
+        overflow-hidden;
+    }
+
+    &__content{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-5;
+    }
+
+    &__columns{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        gap-5;
+
+        @media(min-width: 1023px){
+            @apply
+            grid-cols-2;
+        }
+    }
+
+    &__column{
+        @apply
+        relative;
+    }
+
+    &__illustration{
+        @apply
+        hidden;
+
+        @media(min-width: 1023px){
+            @apply
+            absolute
+            block
+            w-full
+            h-full
+            object-cover;
+        }
+    }
+
+    &__cards{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        gap-5;
+
+        @media(min-width: 375px){
+            @apply
+            grid-cols-2;
+        }
+
+        @media(min-width: 1023px){
+            @apply
+            gap-y-10
+            gap-x-[18px];
+        }
+    }
+
+    &__card{
+        @extend .transition;
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-5
+        bg-gray-100
+        p-3;
+
+        @media(min-width: 375px){
+            @apply
+            p-6;
+        }
+
+        @media(min-width: 767px) and (max-width: 1023px){
+            @apply
+            h-52;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            gap-8
+            py-11
+            px-[60px];
+        }
+    }
+
+    &__card-group{
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-3;
+    }
+
+    &__card-pretitle,
+    &__card-description{
+        @apply
+        w-full
+        text-sm
+        text-gray-300
+        font-normal;
+    }
+
+    &__card-pretitle{
+        @apply
+        border-b-2
+        border-gray-200
+        pb-[10px];
+    }
+
+    &__card-title{
+        @apply
+        w-full
+        text-lg
+        text-gray-400
+        font-normal;
+
+        @media(min-width: 1279px){
+            @apply
+            text-[32px];
+        }
+    }
+
+    &__card-description{
+        @media(min-width: 1279px){
+            @apply
+            text-lg
+            leading-normal-important;
+        }
+    }
+
+    &__card-link{
+        @extend .transition;
+        &:hover{
+            .grid-cards__card{
+                @apply
+                bg-blue-300;
+            }
+
+            .grid-cards__card-pretitle,
+            .grid-cards__card-description{
+                @apply
+                text-gray-200;
+            }
+
+            .grid-cards__card-title{
+                @apply
+                text-white;
+            }
+        }
+    }
+
+    &__card-illustration{
+        @apply
+        block
+        w-full
+        h-full
+        object-cover;
+
+        @media(min-width: 767px){
+            @apply
+            h-52;
+        }
+
+        @media(min-width: 1023px){
+            @apply
+            hidden;            
+        }
+    }
+}

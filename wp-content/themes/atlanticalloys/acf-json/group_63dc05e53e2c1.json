@@ -1,0 +1,209 @@
+{
+    "key": "group_63dc05e53e2c1",
+    "title": "Configurações",
+    "fields": [
+        {
+            "key": "field_63dc06105a355",
+            "label": "Configurações",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63dc05e5d3d66",
+            "label": "Desabilitar bloco",
+            "name": "disabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Desabilitar a exibição do bloco",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_65c3e12e06ea7",
+            "label": "Habilitar Parallax",
+            "name": "enable_parallax",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_65bcf6f0babfa",
+            "label": "Tema (cor de fundos e textos)",
+            "name": "theme_colors",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "is-theme-light": "Light",
+                "is-theme-dark": "Dark"
+            },
+            "default_value": "is-theme-light",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_63dc06c8aa39f",
+            "label": "Padding superior",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "padding-top-0": "Sem padding",
+                "padding-top-20": "20px",
+                "padding-top-40": "40px",
+                "padding-top-80": "80px (padrão)",
+                "padding-top-120": "120px",
+                "padding-top-150": "150px",
+                "padding-top-180": "180px"
+            },
+            "default_value": "padding-top-80",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63dc070e6da74",
+            "label": "Padding inferior",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "padding-bottom-0": "Sem padding",
+                "padding-bottom-20": "20px",
+                "padding-bottom-40": "40px",
+                "padding-bottom-80": "80px (padrão)",
+                "padding-bottom-120": "120px",
+                "padding-bottom-150": "150px",
+                "padding-bottom-180": "180px"
+            },
+            "default_value": "padding-bottom-80",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63dc0743a7187",
+            "label": "Desabilitar no mobile",
+            "name": "desktop-only",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Esconder este bloco nos dispositivos mobile",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_63dc076fa7188",
+            "label": "Desabilitar no desktop",
+            "name": "desabilitar_no_desktop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "mobile-only",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 9,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1707402133
+}

@@ -1,0 +1,167 @@
+.mainmenu{
+    @apply
+    fixed
+    hidden
+    w-full
+    bg-white
+    z-40;
+
+    &__columns{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        py-14;
+
+        @media(min-width: 767px) {
+            @apply
+            grid-cols-2
+            py-0;            
+        }
+
+        > div{
+            &:first-of-type{
+                @apply
+                flex-1
+                flex
+                flex-col
+                gap-8
+                p-5;
+
+                @media(min-width: 767px) {
+                    @apply
+                    p-7;
+                }
+
+                @media(min-width: 1279px) {
+                    @apply
+                    p-10;
+                }
+
+                @media(min-width: 1535px) {
+                    @apply
+                    gap-20
+                    p-20;
+                }
+            }
+
+            &:last-of-type{
+                @apply
+                hidden;
+
+                @media(min-width: 767px) {
+                    @apply
+                    block
+                    relative
+                    basis-1/2;
+                }
+            }
+        }
+    }
+
+    &__list{
+        @apply
+        flex
+        flex-col
+        gap-4;
+        
+        @media(min-width: 1279px) {
+            @apply
+            gap-8
+            pl-5;
+        }
+
+        @media(min-width: 1535px) {
+            @apply
+            gap-20
+            pl-11;
+        }
+    }
+
+    .menu-item{
+        @apply
+        w-fit;
+
+        &:hover,
+        &.current-menu-item{            
+            a{
+                &::after{
+                    @apply
+                    opacity-100;
+                }
+            }
+        }
+
+        a{
+            @extend .transition;
+            @apply
+            relative
+            w-fit
+            text-2xl
+            text-gray-400
+            font-normal
+            leading-normal-important
+            no-underline;
+
+            &:hover{
+                @apply
+                no-underline;
+            }
+
+            &:focus{
+                @apply
+                outline-none;
+            }
+
+            &::after{
+                content: '';
+                @extend .transition;
+                @apply
+                absolute
+                bottom-0
+                left-0
+                w-full
+                h-2px
+                bg-gray-400
+                opacity-0;
+
+                @media(min-width: 1535px) {
+                    @apply
+                    bottom-1
+                    h-4px;
+                }
+            }
+
+            @media(min-width: 1023px) {
+                @apply
+                text-3xl;
+            }
+
+            @media(min-width: 1535px) {
+                @apply
+                text-72px;
+            }
+        }
+    }
+
+    &__close{
+        @apply
+        cursor-pointer
+        w-6
+        h-6;
+
+        @media(min-width: 1535px) {
+            @apply
+            w-10
+            h-10;            
+        }
+    }
+
+    &__illustration{
+        @apply
+        block
+        w-full
+        h-full
+        object-cover;
+    }
+}

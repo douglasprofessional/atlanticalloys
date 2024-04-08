@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply
+  text-gray-400
+  font-bold;
+}
+
+h1{
+  @apply
+  text-3xl;
+
+  @media (min-width: 1535px) {
+    @apply
+    text-72px;
+  }
+}
+
+h2{
+  @apply
+  text-2xl;
+}
+
+h3{
+  @apply
+  text-lg;
+}
+
+h4,
+h5,
+h6{
+  @apply
+  text-base;
+
+  @media (min-width: 1535px) {
+    @apply
+    text-lg;
+  }
+}
+
+// This rule needs to be here, so don't remove it!
+h1, h2, h3, h4, h5, h6 {
+  @apply leading-normal-important;
+}

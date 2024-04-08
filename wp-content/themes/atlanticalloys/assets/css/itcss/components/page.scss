@@ -1,0 +1,12 @@
+.page{
+    &__gutenberg{
+        @apply
+        text-black-100
+        mb-5;
+
+        p:empty{
+            @apply
+            hidden;
+        }
+    }
+}

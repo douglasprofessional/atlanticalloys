@@ -1,0 +1,147 @@
+.form-custom{
+    @apply
+    w-full
+    flex
+    flex-col
+    gap-5;
+
+    @media(min-width: 1279px){
+        @apply
+        gap-9;
+    }
+
+    &__row{
+        @apply
+        w-full
+        grid
+        grid-cols-1
+        gap-5;
+
+        @media(min-width: 1279px){
+            @apply
+            grid-cols-2;
+        }
+    }
+
+    &__col{
+        @apply
+        relative
+        w-full;
+
+        &--span-2{
+            @apply
+            col-span-2;
+        }
+
+        > p label{
+            @apply
+            flex
+            flex-col
+            gap-1
+            text-sm
+            text-gray-400;
+        }
+    }
+
+    span.wpcf7-form-control-wrap{
+        @apply
+        w-full
+        h-auto
+        flex
+        justify-center
+        items-center;
+    }
+
+    .wpcf7-textarea,
+    input:not([type="submit"]){
+        @apply
+        w-full
+        text-sm
+        text-gray-400
+        border-1
+        border-blue-50
+        bg-gray-100
+        rounded-sm
+        px-4;
+
+        &:focus{
+            @apply
+            outline-none;
+        }
+    }
+
+    input:not([type="submit"]){
+        @apply
+        flex
+        flex-col
+        items-center
+        w-full
+        h-10;
+
+        @media(min-width: 1279px){
+            @apply
+            h-14;
+        }
+
+        @media(min-width: 1535px){
+            @apply
+            h-71px;
+        }
+    }
+
+    .wpcf7-textarea{
+        @apply
+        h-56
+        resize-none
+        pt-4;
+    }
+
+    #formCustomSubmit{
+        width: fit-content !important;
+    }
+
+    span.wpcf7-spinner{
+        @apply
+        absolute
+        top-2/4
+        -translate-y-1/2
+        right-0
+        left-initial
+        left-initial
+        bg-blue-500
+        m-0
+        z-20;
+    }
+
+    span.wpcf7-not-valid-tip{
+        @apply
+        absolute
+        bottom-0
+        left-4
+        text-xs
+        pointer-events-none;
+    }
+
+    span[data-name="footer-contact-message"]{
+        span.wpcf7-not-valid-tip{
+            @apply
+            top-1
+            bottom-0;
+        }        
+    }
+
+    & + div.wpcf7-response-output{
+        @apply
+        text-sm
+        text-white
+        font-semibold
+        mt-4
+        mx-0
+        mb-0;
+    }
+
+    br{
+        @apply
+        hidden;
+    }
+}
